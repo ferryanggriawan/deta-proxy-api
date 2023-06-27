@@ -1,0 +1,5 @@
+requests
+typing
+pydantic
+fastapi
+uvicorn[standard]
