@@ -24,6 +24,7 @@ class _Params(BaseModel):
     methods: str = "get"
     url: str
     params: Optional[dict] = None
+    data: Optional[dict] = None
 
 
 @app.get("/")
@@ -37,7 +38,10 @@ def proxyAPI(item: _Params):
     url = item.url
     params = item.params
     headers = item.headers
+    data = item.data
 
-    response = requests.request(method=methods, url=url, headers=headers, params=params)
+    response = requests.request(
+        method=methods, url=url, headers=headers, params=params, json=data
+    )
 
     return response.json()
