@@ -1,5 +1,8 @@
-# deta-proxy-api
+# proxy api
 Simple proxy cors
+
+## Swagger docs
+https://proxypass-1-a3415167.deta.app/docs
 
 ## usage
 example fetch with axios
